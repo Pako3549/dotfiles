@@ -7,7 +7,6 @@
 dir="/home/pako/Immagini/screenshots/"
 filename="screenshot_$(date +"%Y%m%d_%H%M%S").png"
 
-# Cattura la selezione dell'area, se l'utente preme ESC esce senza fare nulla
 geometry=$(slurp)
 if [ $? -eq 0 ]; then
 	grim -g "$geometry" "$dir""$filename"
