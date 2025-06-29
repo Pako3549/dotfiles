@@ -146,17 +146,17 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
    ```
 
 4. **Install dependencies**:
-   - [hyprland](https://github.com/hyprwm/Hyprland)
-   - [waybar](https://github.com/Alexays/Waybar)
-   - [kitty](https://github.com/kovidgoyal/kitty)
-   - [fish shell](https://github.com/fish-shell/fish-shell)
-   - [dunst](https://github.com/dunst-project/dunst)
-   - [rofi-wayland](https://github.com/lbonn/rofi)
-   - [wlogout](https://github.com/ArtsyMacaw/wlogout)
-   - [grim](https://github.com/emersion/grim)
-   - [slurp](https://github.com/emersion/slurp)
-   - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
-   - [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
+- [hyprland](https://github.com/hyprwm/Hyprland)
+- [waybar](https://github.com/Alexays/Waybar)
+- [kitty](https://github.com/kovidgoyal/kitty)
+- [fish shell](https://github.com/fish-shell/fish-shell)
+- [dunst](https://github.com/dunst-project/dunst)
+- [rofi-wayland](https://github.com/lbonn/rofi)
+- [wlogout](https://github.com/ArtsyMacaw/wlogout)
+- [grim](https://github.com/emersion/grim)
+- [slurp](https://github.com/emersion/slurp)
+- [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+- [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## 🎨 Customization
 
