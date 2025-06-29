@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 #-------------------------------------------------
-#----- FULLSCREEN SCREENSHOT 
+#----- FULL SCREENSHOT 
 #-------------------------------------------------
 
 dir="/home/pako/Immagini/screenshots/"
