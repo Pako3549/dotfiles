@@ -205,12 +205,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## 🙏 Credits
 
-All configurations and tweaks were created by me, with inspiration from the amazing Linux ricing community.
-
-Special thanks to:
-- The hyprland development team
-- The dotfiles community on r/unixporn
-- Everyone sharing their configs and scripts
+All configurations and tweaks were created by me, [pako](https://github.com/Pako3549).
 
 ---
 
