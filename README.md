@@ -153,7 +153,8 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
    - [dunst](https://github.com/dunst-project/dunst)
    - [rofi-wayland](https://github.com/lbonn/rofi)
    - [wlogout](https://github.com/ArtsyMacaw/wlogout)
-   - [grim](https://github.com/emersion/grim) & [slurp](https://github.com/emersion/slurp) (for screenshots)
+   - [grim](https://github.com/emersion/grim)
+   - [slurp](https://github.com/emersion/slurp)
    - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
    - [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
