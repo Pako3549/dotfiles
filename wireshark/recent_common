@@ -1,0 +1,142 @@
+# Common recent settings file for Wireshark 4.4.7.
+#
+# This file is regenerated each time Wireshark is quit
+# and when changing configuration profile.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+recent.capture_file: /home/pako/CyberChallenge/nw-security/nw-intro09.pcapng
+recent.capture_file: /home/pako/CTF/OliCyber/nazionali/network/llt.pcap
+recent.capture_file: /home/pako/CTF/CyberChallenge/locale/network/vgallery.pcap
+recent.capture_file: /home/pako/CTF/CyberChallenge/locale/misc/vgallery.pcap
+
+######## Recent capture filters (latest first), cannot be altered through command line ########
+
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: udp.stream eq 6
+recent.display_filter: ip.addr == 172.67.157.96
+recent.display_filter: http
+recent.display_filter: ip.addr == 172.18.0.2
+recent.display_filter: frame contains "olicyber"
+recent.display_filter: tcp
+recent.display_filter: udp.stream eq 3
+recent.display_filter: data
+recent.display_filter: tcp.stream eq 0
+recent.display_filter: ftp
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: 0
+gui.geometry_main_y: -38
+gui.geometry_main_width: 2192
+gui.geometry_main_height: 1163
+
+# Main window maximized.
+# true or false (case-insensitive).
+gui.geometry_main_maximized: true
+
+# Main window geometry state.
+# Hex byte string.
+gui.geometry_main: 01d9d0cb0003000000000000ffffffda0000088f0000048a0000000000000000000003bf000002ff0000000002000000089000000000000000000000088f0000048a
+
+# Leftalign Action Buttons.
+# true or false (case-insensitive).
+gui.geometry_leftalign_actions: false
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# Number of packets or events to check for automatic profile switching.
+# Decimal number. Zero disables switching.
+#gui.profile_switch_check_count: 1000
+
+# Warn if running with elevated permissions (e.g. as root).
+# true or false (case-insensitive).
+privs.warn_if_elevated: true
+
+# Warn if Wireshark is unable to capture.
+# true or false (case-insensitive).
+sys.warn_if_no_capture: true
+
+# Find packet search in.
+# One of: PACKET_LIST, PACKET_DETAILS, PACKET_BYTES
+gui.search_in: PACKET_LIST
+
+# Find packet character set.
+# One of: NARROW_AND_WIDE, NARROW, WIDE
+gui.search_char_set: NARROW_AND_WIDE
+
+# Find packet case sensitive search.
+# true or false (case-insensitive).
+gui.search_case_sensitive: false
+
+# Find packet search reverse direction.
+# true or false (case-insensitive).
+gui.search_reverse_dir: false
+
+# Find packet search multiple occurrences.
+# true or false (case-insensitive).
+gui.search_multiple_occurs: false
+
+# Find packet search type.
+# One of: DISPLAY_FILTER, HEX_VALUE, STRING, REGEX
+gui.search_type: DISPLAY_FILTER
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 0
+gui.geom.PacketDialog.y: 0
+gui.geom.PacketDialog.width: 945
+gui.geom.PacketDialog.height: 504
+# true or false (case-insensitive).
+gui.geom.PacketDialog.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.PacketDialog.qt_geometry: 01d9d0cb000300000000000000000000000003b0000001f70000000000000000000003b0000001f7000000000200000007800000000000000000000003b0000001f7
+
+# Geometry and maximized state of TLS Decrypt window.
+# Decimal integers.
+gui.geom.TLS Decrypt.x: 146
+gui.geom.TLS Decrypt.y: 52
+gui.geom.TLS Decrypt.width: 566
+gui.geom.TLS Decrypt.height: 403
+# true or false (case-insensitive).
+gui.geom.TLS Decrypt.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.TLS Decrypt.qt_geometry: 01d9d0cb000300000000009200000034000002c7000001c60000009200000034000002c7000001c6000000000200000007800000009200000034000002c7000001c6
+
+# Geometry and maximized state of PreferencesDialog window.
+# Decimal integers.
+gui.geom.PreferencesDialog.x: 0
+gui.geom.PreferencesDialog.y: 0
+gui.geom.PreferencesDialog.width: 879
+gui.geom.PreferencesDialog.height: 587
+# true or false (case-insensitive).
+gui.geom.PreferencesDialog.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.PreferencesDialog.qt_geometry: 01d9d0cb0003000000000000000000000000036e0000024a00000000000000000000036e0000024a0000000002000000078000000000000000000000036e0000024a
+
+# Geometry and maximized state of FollowStreamDialog window.
+# Decimal integers.
+gui.geom.FollowStreamDialog.x: 0
+gui.geom.FollowStreamDialog.y: 0
+gui.geom.FollowStreamDialog.width: 945
+gui.geom.FollowStreamDialog.height: 1017
+# true or false (case-insensitive).
+gui.geom.FollowStreamDialog.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.FollowStreamDialog.qt_geometry: 01d9d0cb000300000000000000000000000003b0000003f80000000000000000000003b0000003f8000000000200000007800000000000000000000003b0000003f8
+
+# Custom colors.
+# List of custom colors selected in Qt color picker.
+gui.custom_colors: 
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff"
