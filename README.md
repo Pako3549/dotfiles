@@ -50,7 +50,7 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - **OS**: Fedora Linux 42 (Workstation Edition) x86_64
 - **WM (Window Manager)**: hyprland
 - **File Manager**: nautilus + nnn
-- **Browser**: firefox/chromium
+- **Browser**: firefox
 - **Terminal**: kitty
 - **Shell**: fish
 - **Editor**: neovim/vscode
@@ -58,6 +58,7 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - **Launcher**: rofi
 - **Notification Daemon**: dunst
 - **Logout Menu**: wlogout
+- **Wallpaper Manager**: swww
 
 ## 📝 TODO
 
@@ -153,6 +154,7 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - [dunst](https://github.com/dunst-project/dunst)
 - [rofi-wayland](https://github.com/lbonn/rofi)
 - [wlogout](https://github.com/ArtsyMacaw/wlogout)
+- [swww](https://github.com/Horus645/swww)
 - [grim](https://github.com/emersion/grim)
 - [slurp](https://github.com/emersion/slurp)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
