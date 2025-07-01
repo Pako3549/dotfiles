@@ -134,7 +134,14 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
    cp -r ~/.config/{hypr,waybar,kitty,fish,dunst,rofi} ~/.config/backup/
    ```
 
-3. **Setup configurations** (choose one method):
+3. **Setup fonts**:
+   ```bash
+   mkdir -p ~/.local/share
+   ln -sf ~/.config/dotfiles/.local/share/fonts ~/.local/share/fonts
+   fc-cache -fv
+   ```
+
+4. **Setup configurations** (choose one method):
    
    **Option A - Symlinks (recommended):**
    ```bash
@@ -146,7 +153,7 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
    cp -r ~/.config/dotfiles/.config/* ~/.config/
    ```
 
-4. **Install dependencies**:
+5. **Install dependencies**:
 - [hyprland](https://github.com/hyprwm/Hyprland)
 - [waybar](https://github.com/Alexays/Waybar)
 - [kitty](https://github.com/kovidgoyal/kitty)
