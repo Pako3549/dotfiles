@@ -166,6 +166,14 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - [grim](https://github.com/emersion/grim)
 - [slurp](https://github.com/emersion/slurp)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+- [cliphist](https://github.com/sentriz/cliphist)
+- [hyprshot](https://github.com/Gustash/Hyprshot)
+- [hyprpicker](https://github.com/hyprwm/hyprpicker)
+- [pavucontrol](https://github.com/pulseaudio/pavucontrol)
+- [blueman](https://github.com/blueman-project/blueman)
+- [nmtui](https://gitlab.freedesktop.org/NetworkManager/NetworkManager)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- [htop](https://github.com/htop-dev/htop)
 - [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## 🎨 Customization
