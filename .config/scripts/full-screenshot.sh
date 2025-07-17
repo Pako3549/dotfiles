@@ -10,7 +10,7 @@ after_count=$(find "$dir" -maxdepth 1 -type f -name '*_hyprshot.png' 2>/dev/null
 
 if [ "$after_count" -gt "$before_count" ]; then
     new_file=$(find "$dir" -maxdepth 1 -type f -name '*_hyprshot.png' 2>/dev/null | sort | tail -n1)
-    echo "Nuovo file: $new_file"
+    echo "New file: $new_file"
     
     wl-copy < "$new_file"
     
@@ -21,6 +21,6 @@ if [ "$after_count" -gt "$before_count" ]; then
         dunstify -a System -u normal "Opening screenshot..." -t 1500 -h string:x-dunst-stack-tag:color-picker
     fi
 else
-    echo "Screenshot cancellato o fallito"
+    echo "Screenshot deleted or failed"
     exit 0
 fi
