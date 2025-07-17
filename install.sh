@@ -92,7 +92,7 @@ install_dependencies() {
         echo "• rofi-wayland, wlogout, swww, grim, slurp, wl-clipboard"
         echo "• cliphist, hyprshot, hyprpicker, pavucontrol, blueman"
         echo "• NetworkManager-tui, fastfetch, htop, btop"
-        echo "• adwaita-gtk-theme, adwaita-qt"
+        echo "• adwaita-gtk2-theme, adwaita-icon-theme, adw-gtk3-theme, adwaita-qt (for dark theme support)"
         echo
         return 0
     fi
@@ -122,7 +122,8 @@ install_dependencies() {
         "htop"
         "btop"
         "adwaita-gtk2-theme"
-        "adwaita-gtk3-theme" 
+        "adwaita-icon-theme"
+        "adw-gtk3-theme"
         "qadwaitadecorations-qt5"
     )
     
@@ -202,22 +203,45 @@ setup_fonts() {
 setup_configurations() {
     print_status "Setting up configurations..."
     
-    # Create backup of existing configs
-    print_status "Creating backup of existing configurations..."
-    mkdir -p ~/.config/backup
-    
-    # Backup existing configs if they exist
-    local configs_to_backup=("hypr" "waybar" "kitty" "fish" "dunst" "rofi")
-    for config in "${configs_to_backup[@]}"; do
-        if [ -d ~/.config/"$config" ] || [ -L ~/.config/"$config" ]; then
-            cp -r ~/.config/"$config" ~/.config/backup/ 2>/dev/null || {
-                print_warning "Failed to backup $config configuration, continuing..."
-            }
-            if [ -d ~/.config/backup/"$config" ]; then
-                print_status "Backed up $config configuration"
+    # Backup existing configs if they exist - dynamically detect all config directories
+    local backup_created=false
+    if [ -d "$DOTFILES_DIR/.config" ]; then
+        for item in "$DOTFILES_DIR/.config"/*; do
+            if [ -d "$item" ]; then
+                config_name=$(basename "$item")
+                # Skip fonts directory as it's handled separately
+                if [ "$config_name" != "fonts" ]; then
+                    if [ -d ~/.config/"$config_name" ] || [ -L ~/.config/"$config_name" ]; then
+                        # Check if it's a symlink to avoid backing up symlinks pointing to our dotfiles
+                        if [ -L ~/.config/"$config_name" ]; then
+                            # It's a symlink, check if it points to our dotfiles
+                            link_target=$(readlink ~/.config/"$config_name")
+                            if [[ "$link_target" == "$DOTFILES_DIR"* ]]; then
+                                print_status "Skipping backup of $config_name (already a symlink to dotfiles)"
+                                continue
+                            else
+                                print_status "Backing up external symlink: $config_name -> $link_target"
+                            fi
+                        fi
+                        
+                        # Create backup directory only when needed
+                        if [ "$backup_created" = false ]; then
+                            print_status "Creating backup of existing configurations..."
+                            mkdir -p ~/.config/backup
+                            backup_created=true
+                        fi
+                        
+                        cp -r ~/.config/"$config_name" ~/.config/backup/ 2>/dev/null || {
+                            print_warning "Failed to backup $config_name configuration, continuing..."
+                        }
+                        if [ -d ~/.config/backup/"$config_name" ] || [ -L ~/.config/backup/"$config_name" ]; then
+                            print_status "Backed up $config_name configuration"
+                        fi
+                    fi
+                fi
             fi
-        fi
-    done
+        done
+    fi
     
     # Setup configurations based on chosen method
     if [ -d "$DOTFILES_DIR/.config" ]; then
