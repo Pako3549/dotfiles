@@ -92,6 +92,7 @@ install_dependencies() {
         echo "• rofi-wayland, wlogout, swww, grim, slurp, wl-clipboard"
         echo "• cliphist, hyprshot, hyprpicker, pavucontrol, blueman"
         echo "• NetworkManager-tui, fastfetch, htop, btop"
+        echo "• adwaita-gtk-theme, adwaita-qt"
         echo
         return 0
     fi
@@ -120,6 +121,9 @@ install_dependencies() {
         "fastfetch"
         "htop"
         "btop"
+        "adwaita-gtk2-theme"
+        "adwaita-gtk3-theme" 
+        "qadwaitadecorations-qt5"
     )
     
     for package in "${packages[@]}"; do

@@ -185,6 +185,8 @@ chmod +x install.sh
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [htop](https://github.com/htop-dev/htop)
 - [btop](https://github.com/aristocratos/btop)
+- [adwaita-gtk-theme](https://gitlab.gnome.org/GNOME/libadwaita)
+- [adwaita-qt](https://github.com/FedoraQt/adwaita-qt)
 - [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## 🎨 Customization
