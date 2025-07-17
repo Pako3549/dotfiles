@@ -294,6 +294,12 @@ main() {
     print_success "Dotfiles installation completed!"
     
     echo
+    print_warning "⚠️  HYPRLAND SPECIFIC: Please review and update the following in hyprland.conf:"
+    echo "• Keyboard layout: Check 'input { kb_layout = }' section"
+    echo "• Monitor configuration: Check 'monitor = ' lines for your displays"
+    echo "• Display resolution and refresh rate settings"
+    echo "• Workspace assignments to monitors"
+    echo
     print_warning "⚠️  IMPORTANT: Please update hardcoded paths in configuration files!"
     echo
     print_status "Some configuration files may contain hardcoded paths that need to be updated:"
