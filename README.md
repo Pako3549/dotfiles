@@ -69,9 +69,9 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - [x] Custom waybar restart script
 - [x] Hyprland keybindings configuration
 - [x] Multi-monitor setup configuration
+- [x] Automated installation script
 
 ### 🚧 In Progress
-- [ ] Automated installation script
 - [ ] More hyprland animations
 - [ ] Custom fish functions documentation
 - [ ] rofi themes collection
@@ -122,9 +122,19 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 
 ## 🚀 Installation
 
+### Quick Installation (Recommended)
+```bash
+git clone https://github.com/Pako3549/dotfiles ~/.config/dotfiles
+cd ~/.config/dotfiles
+chmod +x install.sh
+./install.sh
+```
+
+### Manual Installation
+
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/pako/dotfiles ~/.config/dotfiles
+   git clone https://github.com/Pako3549/dotfiles ~/.config/dotfiles
    cd ~/.config/dotfiles
    ```
 
@@ -174,6 +184,7 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - [nmtui](https://gitlab.freedesktop.org/NetworkManager/NetworkManager)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [htop](https://github.com/htop-dev/htop)
+- [btop](https://github.com/aristocratos/btop)
 - [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## 🎨 Customization
