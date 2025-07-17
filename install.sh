@@ -300,30 +300,15 @@ main() {
     echo "• Display resolution and refresh rate settings"
     echo "• Workspace assignments to monitors"
     echo
-    print_warning "⚠️  IMPORTANT: Please update hardcoded paths in configuration files!"
-    echo
-    print_status "Some configuration files may contain hardcoded paths that need to be updated:"
-    echo "• Hyprland config: Check exec commands and wallpaper paths"
-    echo "• Waybar config: Check script paths and module configurations"
-    echo "• Scripts: Update any absolute paths to match your username/setup"
-    echo "• Wallpaper paths: Update swww or other wallpaper manager paths"
-    echo
-    print_status "Search for paths like:"
-    echo "• /home/pako/ (replace with your username)"
-    echo "• ~/.config/dotfiles/ (if you cloned elsewhere)"
-    echo "• Any other absolute paths in configs"
-    echo
     
     print_status "Next steps:"
     if command -v dnf &> /dev/null; then
-        echo "1. Review and update hardcoded paths in configurations"
-        echo "2. Logout and login to Hyprland session"
-        echo "3. Enjoy your new setup!"
+        echo "1. Logout and login to Hyprland session"
+        echo "2. Enjoy your new setup!"
     else
         echo "1. Install the required packages for your distribution (see list above)"
-        echo "2. Review and update hardcoded paths in configurations"
-        echo "3. Logout and login to Hyprland session"
-        echo "4. Enjoy your new setup!"
+        echo "2. Logout and login to Hyprland session"
+        echo "3. Enjoy your new setup!"
     fi
 }
 

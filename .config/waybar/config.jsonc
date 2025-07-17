@@ -20,8 +20,8 @@
 
     // Load Modules
     "include": [
-        "/home/pako/.config/waybar/waybar-quicklinks.jsonc",
-        "/home/pako/.config/waybar/modules.jsonc"
+        "~/.config/waybar/waybar-quicklinks.jsonc",
+        "~/.config/waybar/modules.jsonc"
     ],
 
     // Modules Left
