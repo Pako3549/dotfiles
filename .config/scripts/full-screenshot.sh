@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="/home/pako/Pictures/screenshots/"
+dir="$HOME/Pictures/screenshots/"
 
 before_count=$(find "$dir" -maxdepth 1 -type f -name '*_hyprshot.png' 2>/dev/null | wc -l)
 

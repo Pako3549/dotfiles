@@ -4,7 +4,7 @@
 #----- SCREENSHOT
 #-------------------------------------------------
 
-dir="/home/pako/Pictures/screenshots/"
+dir="$HOME/Pictures/screenshots/"
 filename="screenshot_$(date +"%Y%m%d_%H%M%S").png"
 
 geometry=$(slurp)
