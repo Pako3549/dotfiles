@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 dir="/home/pako/Pictures/screenshots/"
 
