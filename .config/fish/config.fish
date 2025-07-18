@@ -11,16 +11,20 @@ alias vim=nvim
 set -gx GTK_THEME Adwaita:dark
 set -gx QT_QPA_PLATFORMTHEME gtk3
 set -gx QT_STYLE_OVERRIDE Adwaita-Dark
+set -gx GTK2_RC_FILES /usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc:~/.gtkrc-2.0
+set -gx PREFER_DARK_THEME 1
 
 # Configure GNOME/GTK system-wide dark theme (affects keyring, login dialogs, etc.)
 if command -q gsettings
     gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' 2>/dev/null
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' 2>/dev/null
     gsettings set org.gnome.desktop.interface icon-theme 'Adwaita' 2>/dev/null
+    gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita-dark' 2>/dev/null
+    gsettings set org.gtk.Settings.FileChooser sort-directories-first true 2>/dev/null
 end
 
 ###----- PNPM HOME -----#
-set -gx PNPM_HOME "/home/pako/.local/share/pnpm"
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
