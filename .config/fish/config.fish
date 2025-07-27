@@ -29,7 +29,18 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 
+###----- ANDROID HOME -----#
+set -x ANDROID_HOME $HOME/Android
+set -x PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
+set -x PATH $ANDROID_HOME/platform-tools $PATH
+set -x PATH $ANDROID_HOME/emulator $PATH
+
+###----- JAVA 17 HOME -----#
+set -gx JAVA_HOME ~/.sdkman/candidates/java/current
+set -gx PATH $JAVA_HOME/bin $PATH
+
 ###----- FUNCTIONS -----###
 function fish_greeting
     echo 'Welcome'(set_color 0000CD) $USER (set_color FFFFFF)'(≧◡≦)'
 end
+
