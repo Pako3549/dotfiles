@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export --path NIX_PATH:nixos
+SETUVAR --export --path PATH:/home/pako/\x2epyenv/bin\x1e/home/pako/\x2esdkman/candidates/java/current/bin\x1e/home/pako/Android/emulator\x1e/home/pako/Android/platform\x2dtools\x1e/home/pako/Android/cmdline\x2dtools/latest/bin\x1e/home/pako/\x2epyenv/bin\x1e/home/pako/\x2elocal/bin/\x1e/home/pako\x1e/home/pako/\x2evscode/extensions/arm\x2evscode\x2dcmsis\x2ddebugger\x2d1\x2e0\x2e0\x2dlinux\x2dx64/tools/pyocd\x1e/home/pako/\x2evscode/extensions/arm\x2evscode\x2dcmsis\x2ddebugger\x2d1\x2e0\x2e0\x2dlinux\x2dx64/tools/gdb/bin\x1e/home/pako/\x2epyenv/plugins/pyenv\x2dvirtualenv/shims\x1e/home/pako/\x2epyenv/shims\x1e/home/pako/\x2esdkman/candidates/java/current/bin\x1e/home/pako/Android/emulator\x1e/home/pako/Android/platform\x2dtools\x1e/home/pako/Android/cmdline\x2dtools/latest/bin\x1e/home/pako/\x2elocal/share/pnpm\x1e/usr/local/bin\x1e/usr/bin\x1e/home/pako/\x2econfig/Code/User/globalStorage/github\x2ecopilot\x2dchat/debugCommand
+SETUVAR --export PYENV_ROOT:/home/pako/\x2epyenv
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:707A8C
 SETUVAR fish_color_cancel:\x2d\x2dreverse
@@ -41,4 +43,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dFFCC66
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/pako/\x2elocal/bin/\x1e/home/pako
+SETUVAR fish_user_paths:/home/pako/\x2epyenv/bin\x1e/home/pako/\x2elocal/bin/\x1e/home/pako

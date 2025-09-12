@@ -115,6 +115,8 @@ install_dependencies() {
         "cliphist"
         "hyprshot"
         "hyprpicker"
+        "kdeconnectd"
+        "kdeconnect-cli"
         "pavucontrol"
         "blueman"
         "NetworkManager-tui"
