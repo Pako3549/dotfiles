@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 fish_add_path ~
+fish_add_path ~/.local/bin/
+
 # set fish_greeting ""
 
 ###----- ALIASES -----###
@@ -55,4 +57,35 @@ end
 function fish_greeting
     echo 'Welcome'(set_color 0000CD) $USER (set_color FFFFFF)'(≧◡≦)'
 end
+
+###----- FISH COLORS -----###
+set -g fish_color_autosuggestion 707A8C
+set -g fish_color_cancel --reverse
+set -g fish_color_command 5CCFE6
+set -g fish_color_comment 5C6773
+set -g fish_color_cwd 73D0FF
+set -g fish_color_cwd_root red
+set -g fish_color_end F29E74
+set -g fish_color_error FF3333
+set -g fish_color_escape 95E6CB
+set -g fish_color_history_current --bold
+set -g fish_color_host normal
+set -g fish_color_match F28779
+set -g fish_color_normal CBCCC6
+set -g fish_color_operator FFCC66
+set -g fish_color_param CBCCC6
+set -g fish_color_quote BAE67E
+set -g fish_color_redirection D4BFFF
+set -g fish_color_search_match --background=FFCC66
+set -g fish_color_selection --background=FFCC66
+set -g fish_color_status red
+set -g fish_color_user brgreen
+set -g fish_color_valid_path --underline
+
+###----- FISH PAGER COLORS -----###
+set -g fish_pager_color_completion normal
+set -g fish_pager_color_description B3A06D
+set -g fish_pager_color_prefix normal --bold --underline
+set -g fish_pager_color_progress brwhite --background=cyan
+set -g fish_pager_color_selected_background --background=FFCC66
 
