@@ -165,6 +165,7 @@ chmod +x install.sh
 
 5. **Install dependencies**:
 - [hyprland](https://github.com/hyprwm/Hyprland)
+- [hyprland-qtutils](https://github.com/hyprwm/hyprland-qtutils)
 - [hyprpolkitagent](https://github.com/hyprwm/hyprpolkitagent)
 - [waybar](https://github.com/Alexays/Waybar)
 - [kitty](https://github.com/kovidgoyal/kitty)

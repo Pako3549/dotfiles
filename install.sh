@@ -88,7 +88,7 @@ install_dependencies() {
         print_status "Skipping package installation (not on Fedora)"
         echo
         print_status "Please install the following packages manually for your distribution:"
-        echo "• hyprland, hyprpolkitagent, waybar, kitty, fish, dunst"
+        echo "• hyprland, hyprland-qtutils, hyprpolkitagent, waybar, kitty, fish, dunst"
         echo "• rofi-wayland, wlogout, swww, grim, slurp, wl-clipboard"
         echo "• cliphist, hyprshot, hyprpicker, pavucontrol, blueman"
         echo "• NetworkManager-tui, fastfetch, htop, btop"
@@ -101,6 +101,7 @@ install_dependencies() {
     
     local packages=(
         "hyprland"
+        "hyprland-qtutils"
         "hyprpolkitagent"
         "waybar"
         "kitty"
