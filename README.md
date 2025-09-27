@@ -64,12 +64,14 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 
 ### ✅ Completed
 - [x] Screenshot management scripts with notifications
-- [x] Color picker integration
-- [x] Clipboard history with rofi integration
+- [x] Color picker integration  
+- [x] Advanced clipboard history with image support
+- [x] Wi-Fi hotspot toggle functionality
 - [x] Custom waybar restart script
 - [x] Hyprland keybindings configuration
-- [x] Multi-monitor setup configuration
-- [x] Automated installation script
+- [x] Multi-monitor setup configuration (laptop + 4K home monitor)
+- [x] Automated installation script with dependency management
+- [x] Custom utility scripts collection
 
 ### 🚧 In Progress
 - [ ] More hyprland animations
@@ -107,7 +109,8 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - `super + M`: power menu (wlogout)
 - `super + Y`: restart waybar
 - `super + backslash`: color picker
-- `super + shift + V`: clipboard history (cliphist)
+- `super + shift + V`: clipboard history with image support (cliphist)
+- `super + shift + H`: toggle Wi-Fi hotspot
 
 ### Media Keys
 - `XF86AudioRaiseVolume`: volume up (+5%)
@@ -120,7 +123,20 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - `super + LMB drag`: move window
 - `super + RMB drag`: resize window
 
-## 🚀 Installation
+## �️ Custom Scripts
+
+This setup includes several custom scripts to enhance your workflow:
+
+- **`hotspot.sh`**: Toggle Wi-Fi hotspot functionality (SSID: PakoPC)
+- **`cliphist-rofi-img.sh`**: Advanced clipboard history with image support via rofi
+- **`screenshot.sh`**: Interactive area screenshot with notifications
+- **`full-screenshot.sh`**: Full desktop screenshot utility  
+- **`color-picker.sh`**: System-wide color picker tool
+- **`restart-waybar.sh`**: Waybar restart utility for configuration reloading
+
+All scripts include proper notifications and are optimized for Hyprland workflow.
+
+## �🚀 Installation
 
 ### Quick Installation (Recommended)
 ```bash
@@ -186,6 +202,8 @@ chmod +x install.sh
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [htop](https://github.com/htop-dev/htop)
 - [btop](https://github.com/aristocratos/btop)
+- [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+- [amixer](https://github.com/alsa-project/alsa-utils)
 - [adwaita-gtk-theme](https://gitlab.gnome.org/GNOME/libadwaita)
 - [adwaita-qt](https://github.com/FedoraQt/adwaita-qt)
 - [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
