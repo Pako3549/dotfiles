@@ -53,6 +53,9 @@ if command -v pyenv-virtualenv-init >/dev/null
     pyenv virtualenv-init - | source
 end
 
+###----- ESP-IDF -----###
+alias get_idf="source $HOME/esp/esp-idf/export.fish"
+
 ###----- FUNCTIONS -----###
 function fish_greeting
     echo 'Welcome'(set_color 0000CD) $USER (set_color FFFFFF)'(≧◡≦)'
