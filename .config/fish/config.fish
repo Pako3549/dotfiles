@@ -92,3 +92,9 @@ set -g fish_pager_color_prefix normal --bold --underline
 set -g fish_pager_color_progress brwhite --background=cyan
 set -g fish_pager_color_selected_background --background=FFCC66
 
+
+# opencode
+fish_add_path /home/pako/.opencode/bin
+
+# cargo
+fish_add_path /home/pako/.cargo/bin
