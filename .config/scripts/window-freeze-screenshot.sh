@@ -5,11 +5,9 @@ mkdir -p "$dir"
 
 file="$dir/screenshot_$(date +"%Y%m%d_%H%M%S").png"
 
-grimblast --freeze copysave output "$file"
+grimblast --freeze copysave area "$file"
 
 if [ -f "$file" ]; then
-    echo "New file: $file"
-
     notify=$(dunstify -a System -u low \
         --action="default, open_image" \
         "Screenshot copied and saved" \
@@ -22,6 +20,6 @@ if [ -f "$file" ]; then
             -h string:x-dunst-stack-tag:screenshot
     fi
 else
-    echo "Screenshot failed"
-    exit 1
+    echo "Screenshot failed or cancelled"
+    exit 0
 fi

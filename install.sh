@@ -89,7 +89,7 @@ install_dependencies() {
         echo
         print_status "Please install the following packages manually for your distribution:"
         echo "• hyprland, hyprland-qtutils, hyprpolkitagent, waybar, kitty, fish, dunst"
-        echo "• rofi-wayland, wlogout, swww, grim, slurp, wl-clipboard"
+        echo "• rofi-wayland, wlogout, swww, grim, grimblast, slurp, wl-clipboard"
         echo "• cliphist, hyprshot, hyprpicker, pavucontrol, blueman"
         echo "• NetworkManager-tui, fastfetch, htop, btop"
         echo "• adwaita-gtk2-theme, adwaita-icon-theme, adw-gtk3-theme, adwaita-qt"
@@ -111,6 +111,7 @@ install_dependencies() {
         "wlogout"
         "swww"
         "grim"
+        "grimblast"
         "slurp"
         "wl-clipboard"
         "cliphist"
@@ -130,14 +131,12 @@ install_dependencies() {
         "qadwaitadecorations-qt5"
     )
     
-    for package in "${packages[@]}"; do
-        print_status "Installing $package..."
-        if sudo dnf install -y "$package"; then
-            print_success "$package installed successfully"
-        else
-            print_warning "Failed to install $package, continuing..."
-        fi
-    done
+    print_status "Installing all packages with dnf..."
+    if sudo dnf install -y "${packages[@]}"; then
+        print_success "All packages installed successfully"
+    else
+        print_warning "Some packages failed to install. Please check dnf output and install missing packages manually."
+    fi
 }
 
 # Ask user for installation method

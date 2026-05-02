@@ -191,6 +191,7 @@ chmod +x install.sh
 - [wlogout](https://github.com/ArtsyMacaw/wlogout)
 - [swww](https://github.com/Horus645/swww)
 - [grim](https://github.com/emersion/grim)
+- [grimblast](https://github.com/hyprwm/contrib)
 - [slurp](https://github.com/emersion/slurp)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 - [cliphist](https://github.com/sentriz/cliphist)
