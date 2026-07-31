@@ -8,6 +8,7 @@ fish_add_path ~/.local/bin/
 
 ###----- ALIASES -----###
 alias vim=nvim
+alias cat=bat
 
 ###----- THEMES ENV -----###
 set -gx GTK_THEME Adwaita:dark
