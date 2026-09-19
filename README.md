@@ -136,7 +136,7 @@ This setup includes several custom scripts to enhance your workflow:
 
 All scripts include proper notifications and are optimized for Hyprland workflow.
 
-## �🚀 Installation
+## 🚀 Installation
 
 ### Quick Installation (Recommended)
 ```bash

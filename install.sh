@@ -74,7 +74,7 @@ add_hyprland_copr() {
     fi
     
     print_status "Adding Hyprland COPR repository..."
-    if sudo dnf copr enable solopasha/hyprland -y; then
+    if sudo dnf copr enable nett00n/hyprland -y; then
         print_success "Hyprland COPR repository added successfully"
     else
         print_error "Failed to add Hyprland COPR repository"
