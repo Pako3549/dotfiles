@@ -65,8 +65,8 @@ local fullScreenshot = "~/.config/scripts/full-screenshot.sh"
 local colorPicker = "~/.config/scripts/color-picker.sh"
 local cliphist = "~/.config/scripts/cliphist-rofi-img.sh"
 local hotspot = "~/.config/scripts/hotspot.sh"
-
-local polkitAgent = "/usr/libexec/lxqt-policykit-agent"
+local polkitAgent = "systemctl --user start hyprpolkitagent"
+-- local polkitAgent = "/usr/libexec/lxqt-policykit-agent"
 
 
 --------------------------------------------------
