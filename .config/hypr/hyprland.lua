@@ -75,6 +75,8 @@ local polkitAgent = "systemctl --user start hyprpolkitagent"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd(
+        "systemctl --user import-environment GTK_THEME PREFER_DARK_THEME && " ..
+        "systemctl --user restart xdg-desktop-portal-gtk & " ..
         polkitAgent .. " & " ..
         bar .. " & " ..
         wallpaper .. " & " ..
