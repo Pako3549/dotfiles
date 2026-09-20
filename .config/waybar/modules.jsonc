@@ -164,7 +164,7 @@
         "format-disabled": "",
         "format-off": "",
         "interval": 30,
-        "on-click": "blueman-manager",
+        "on-click": "flatpak run io.github.kaii_lb.Overskride",
         "format-no-controller": ""
     }
 }
