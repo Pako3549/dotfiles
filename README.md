@@ -10,7 +10,7 @@
 
 </div>
 
-Welcome to my dotfiles repository! 🖥️
+Welcome to my dotfiles repository!
 
 This is my personal Linux setup that I've been crafting and refining over time. It's a hyprland-based configuration focused on productivity and aesthetics, with custom scripts and tweaks that make my daily workflow smooth and enjoyable.
 
@@ -18,17 +18,17 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 
 ## Table of Contents
 
-- [📸 Screenshots](#-screenshots)
-- [⚙️ Configs](#️-configs)
-- [📝 TODO](#-todo)
-- [⌨️ Shortcuts](#️-shortcuts)
-- [🚀 Installation](#-installation)
-- [🎨 Customization](#-customization)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [🙏 Credits](#-credits)
+- [Screenshots](#-screenshots)
+- [Configs](#️-configs)
+- [TODO](#-todo)
+- [Shortcuts](#️-shortcuts)
+- [Installation](#-installation)
+- [Customization](#-customization)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Credits](#-credits)
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
@@ -45,7 +45,7 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 
 </div>
 
-## ⚙️ Configs
+## Configs
 
 - **OS**: Fedora Linux 42 (Workstation Edition) x86_64
 - **WM (Window Manager)**: hyprland
@@ -60,9 +60,9 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - **Logout Menu**: wlogout
 - **Wallpaper Manager**: swww
 
-## 📝 TODO
+## TODO
 
-### ✅ Completed
+### Completed
 - [x] Screenshot management scripts with notifications
 - [x] Color picker integration  
 - [x] Advanced clipboard history with image support
@@ -73,13 +73,13 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - [x] Automated installation script with dependency management
 - [x] Custom utility scripts collection
 
-### 🚧 In Progress
+### In Progress
 - [ ] More hyprland animations
 - [ ] Custom fish functions documentation
 - [ ] rofi themes collection
 - [ ] More waybar themes
 
-## ⌨️ Shortcuts
+## Shortcuts
 
 ### Window Management
 - `super + Q`: open terminal (kitty)
@@ -123,7 +123,7 @@ Feel free to explore, steal ideas, or suggest improvements. Nothing here is set 
 - `super + LMB drag`: move window
 - `super + RMB drag`: resize window
 
-## �️ Custom Scripts
+## Custom Scripts
 
 This setup includes several custom scripts to enhance your workflow:
 
@@ -136,7 +136,7 @@ This setup includes several custom scripts to enhance your workflow:
 
 All scripts include proper notifications and are optimized for Hyprland workflow.
 
-## 🚀 Installation
+## Installation
 
 ### Quick Installation (Recommended)
 ```bash
@@ -209,55 +209,47 @@ chmod +x install.sh
 - [adwaita-qt](https://github.com/FedoraQt/adwaita-qt)
 - [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
-## 🎨 Customization
+## Customization
 
 These dotfiles are crafted to match my personal workflow, but the beauty of Linux is in making it your own! 
 
-### 🛠️ Key customization areas:
+### Key customization areas:
 - **hyprland**: Experiment with different animations, window rules, or create your own keybindings
 - **waybar**: Add custom modules, change the layout, or create multiple bar configurations
 - **kitty**: Play with color schemes, font combinations, or transparency levels
 - **fish**: Write custom functions, create aliases that match your workflow
 - **rofi**: Design your own themes, add custom modi, or integrate with your scripts
 
-### 💡 Pro tips:
+### Pro tips:
 - Start small - change one thing at a time
 - Keep backups of configurations that work for you
 - Don't be afraid to break things - that's how you learn!
 
-## 🤝 Contributing
+## Contributing
 
 Hey there! While these are my personal configs, I love when people get involved. Here's how you can contribute:
 
-### 🐛 Found a bug?
+### Found a bug?
 - Open an issue and describe what's broken
 - Include your system info and what you were trying to do
 
-### 💡 Got a cool idea?
+### Got a cool idea?
 - Suggest new features or improvements
 - Share interesting scripts or configurations you've made
 
-### 🚀 Want to contribute code?
+### Want to contribute code?
 1. Fork the repository
 2. Create a feature branch (`git checkout -b cool-new-feature`)
 3. Make your changes and test them
 4. Submit a pull request with a clear description
 
-### 📝 Other ways to help:
+### Other ways to help:
 - Improve documentation
 - Share screenshots of your setup using these configs
 - Help other users in issues
 
-Remember: every contribution, no matter how small, makes this project better! 🌟
+Remember: every contribution, no matter how small, makes this project better!
 
-## 📄 License
+## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Credits
-
-All configurations and tweaks were created by me, [pako](https://github.com/Pako3549).
-
----
-
-*Made with ❤️ and lots of ☕*

@@ -11,36 +11,17 @@
 --------------------------------------------------
 -- MONITORS
 --------------------------------------------------
+-- 15s-fq2060nl 
+-- hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1, })
 
--- hl.monitor({ -- 15s-fq2060nl
---     output = "eDP-1",
---     mode = "1920x1080@60",
---     position = "0x0",
---     scale = 1,
--- })
+-- ux3405ca
+hl.monitor({ output = "eDP-1", mode = "2880x1800@120", position = "0x0", scale = 1.5, })
 
-hl.monitor({ -- ux3405ca
-    output = "eDP-1",
-    mode = "2880x1800@120",
-    position = "0x0",
-    scale = 1.5,
-})
-
-hl.monitor({
-    output = "HDMI-A-1",
-    mode = "3840x2160@60",
-    position = "0x-1080",
-    scale = 2,
-})
+-- Home monitor
+hl.monitor({ output = "HDMI-A-1", mode = "3840x2160@60", position = "0x-1080", scale = 2, })
 
 -- Mirroring:
--- hl.monitor({
---     output = "HDMI-A-1",
---     mode = "preferred",
---     position = "auto",
---     scale = 1,
---     mirror = "eDP-1",
--- })
+-- hl.monitor({ output = "HDMI-A-1", mode = "preferred", position = "auto", scale = 1, mirror = "eDP-1", })
 
 
 --------------------------------------------------
@@ -308,6 +289,9 @@ hl.device({
 
 local mainMod = "SUPER"
 
+-- Hyprlock
+hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
+
 -- Screenshot
 hl.bind("PRINT", hl.dsp.exec_cmd(screenshot))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd(windowFreezeScreenshot))
@@ -324,6 +308,8 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("amixer set Master toggle"))
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set 10%+"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 10%-"))
 
+-- Power profile
+hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("/bin/bash /home/pako/.config/scripts/battery-profiles.sh next"))
 
 -- Menu
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu))
