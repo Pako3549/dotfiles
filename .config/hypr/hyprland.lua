@@ -262,7 +262,6 @@ hl.config({
 hl.config({
     gestures = {
         workspace_swipe_distance = 300,
-        workspace_swipe_touch = false,
         workspace_swipe_invert = true,
         workspace_swipe_min_speed_to_force = 30,
         workspace_swipe_cancel_ratio = 0.5,
@@ -273,6 +272,7 @@ hl.config({
     },
 })
 
+hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
 
 --------------------------------------------------
 -- DEVICE
@@ -281,6 +281,19 @@ hl.config({
 hl.device({
     name = "epic-mouse-v1",
     sensitivity = -0.5,
+})
+
+-- Touch only on eDP-1
+hl.device({
+    name = "wdht1f01:00-2575:092e",
+    output = "eDP-1",                              
+})
+
+-- Configure M2 pen to write precisely at 120Hz
+hl.device({
+    name = "wdht1f01:00-2575:092e-stylus",
+    output = "eDP-1",                              
+    transform = 0,
 })
 
 --------------------------------------------------
