@@ -26,6 +26,9 @@ if command -q gsettings
     gsettings set org.gtk.Settings.FileChooser sort-directories-first true 2>/dev/null
 end
 
+###----- GPG -----###
+set -gx GPG_TTY (tty)
+
 ###----- PNPM HOME -----###
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
