@@ -89,6 +89,16 @@ hl.config({
     },
 })
 
+hl.window_rule({
+    name = "max-payne-2",
+    match = {
+        class = "steam_app_210430",
+    },
+    monitor = "HDMI-A-1",
+    no_blur = true,
+    no_anim = true,
+    rounding = 0,
+})
 
 --------------------------------------------------
 -- GENERAL
