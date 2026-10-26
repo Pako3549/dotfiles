@@ -100,6 +100,15 @@ hl.window_rule({
     rounding = 0,
 })
 
+-- Discord: translucent navy glass, compositor blur behind
+hl.window_rule({
+    name = "discord-glass",
+    match = {
+        class = "discord",
+    },
+    opacity = "0.82 override 0.74 override 1.0 override",
+})
+
 --------------------------------------------------
 -- GENERAL
 --------------------------------------------------
