@@ -272,6 +272,86 @@ setup_configurations() {
     fi
 }
 
+# Install system files for the waybar camera kill-switch
+# - /usr/local/bin/camera-sysfs: root helper that disconnects the USB webcam
+#   (used to kill the camera on the fly, even while an app is using it)
+# - /etc/sudoers.d/camera-toggle: passwordless access to modprobe uvcvideo + helper
+setup_camera_toggle() {
+    print_status "Installing camera kill-switch helper and sudoers rule..."
+
+    local helper="/usr/local/bin/camera-sysfs"
+    local sudoers_file="/etc/sudoers.d/camera-toggle"
+    local user_name="$(id -un)"
+    local sudoers_rule="${user_name} ALL=(root) NOPASSWD: /usr/bin/modprobe uvcvideo, /usr/bin/modprobe -r uvcvideo, /usr/sbin/modprobe uvcvideo, /usr/sbin/modprobe -r uvcvideo, ${helper}"
+
+    # Skip if everything is already in place
+    if [ -x "$helper" ] \
+        && sudo test -f "$sudoers_file" \
+        && sudo grep -qF "$helper" "$sudoers_file" 2>/dev/null; then
+        print_success "Camera kill-switch already installed"
+        return 0
+    fi
+
+    # Root helper: toggles the "authorized" flag of the USB webcam
+    cat > /tmp/camera-sysfs <<'CAMERA_HELPER'
+#!/bin/bash
+# Root helper for the waybar camera kill-switch (~/.config/scripts/camera-toggle.sh)
+# Turns the USB webcam on/off at bus level ("authorized" flag):
+#   camera-sysfs off [DEV]   disconnect the camera (works even while in use)
+#   camera-sysfs on  [DEV]   reconnect it
+# Installed root-owned; allowed in /etc/sudoers.d/camera-toggle.
+
+set -e
+
+ACTION="${1:-}"
+DEV="${2:-}"
+
+if [ "$ACTION" != "off" ] && [ "$ACTION" != "on" ]; then
+    echo "usage: camera-sysfs on|off [DEV]" >&2
+    exit 2
+fi
+
+# strict validation: DEV must look like a USB port id ("3-9", "3-9.4", ...)
+if [ -n "$DEV" ] && ! [[ "$DEV" =~ ^[0-9]+-[0-9]+(\.[0-9]+)*$ ]]; then
+    echo "camera-sysfs: invalid device id" >&2
+    exit 2
+fi
+
+# no explicit device: use the one bound to uvcvideo
+if [ -z "$DEV" ]; then
+    for iface in /sys/bus/usb/drivers/uvcvideo/*:*; do
+        [ -e "$iface" ] || continue
+        DEV="${iface##*/}"
+        DEV="${DEV%%:*}"
+        break
+    done
+fi
+[ -n "$DEV" ] || { echo "camera-sysfs: no USB camera found" >&2; exit 2; }
+
+AUTH="/sys/bus/usb/devices/$DEV/authorized"
+[ -f "$AUTH" ] || { echo "camera-sysfs: unknown device $DEV" >&2; exit 2; }
+
+case "$ACTION" in
+    off) echo 0 > "$AUTH" ;;
+    on)  echo 1 > "$AUTH" ;;
+esac
+CAMERA_HELPER
+
+    if sudo install -m 755 -o root -g root /tmp/camera-sysfs "$helper" \
+        && echo "$sudoers_rule" | sudo tee "$sudoers_file" > /dev/null \
+        && sudo chown root:root "$sudoers_file" \
+        && sudo chmod 440 "$sudoers_file" \
+        && sudo visudo -c -f "$sudoers_file" > /dev/null 2>&1; then
+        rm -f /tmp/camera-sysfs
+        print_success "Camera kill-switch helper and sudoers rule installed"
+    else
+        rm -f /tmp/camera-sysfs
+        print_warning "Failed to install the camera kill-switch system files. Install them manually:"
+        echo "  sudo install -m755 -o root -g root <(see README) /usr/local/bin/camera-sysfs"
+        echo "  echo '$sudoers_rule' | sudo tee $sudoers_file && sudo chown root:root $sudoers_file && sudo chmod 440 $sudoers_file"
+    fi
+}
+
 # Change default shell to fish
 change_shell_to_fish() {
     print_status "Changing default shell to fish..."
@@ -319,6 +399,7 @@ main() {
     choose_installation_method
     setup_fonts
     setup_configurations
+    setup_camera_toggle
     change_shell_to_fish
     
     print_success "Dotfiles installation completed!"

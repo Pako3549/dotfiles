@@ -26,7 +26,8 @@
 
     // Modules Left
     "modules-left": [
-        "custom/appmenu"
+        "custom/appmenu",
+        "custom/camera"
     ],
 
     // Modules Center

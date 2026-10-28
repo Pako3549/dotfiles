@@ -31,6 +31,16 @@
         "on-click": "rofi -show drun -replace",
         "tooltip": false
     },
+
+    // Camera kill-switch (webcam on/off)
+    "custom/camera": {
+        "exec": "~/.config/scripts/camera-toggle.sh",
+        "return-type": "json",
+        "interval": 60,
+        "signal": 8,
+        "on-click": "~/.config/scripts/camera-toggle.sh --toggle",
+        "tooltip": true
+    },
     
     // Power Menu
     "custom/exit": {
