@@ -36,14 +36,15 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 
 ###----- ANDROID HOME -----###
-set -x ANDROID_HOME $HOME/Android
-set -x PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
-set -x PATH $ANDROID_HOME/platform-tools $PATH
-set -x PATH $ANDROID_HOME/emulator $PATH
+set -gx ANDROID_HOME $HOME/Android/Sdk
+set -gx ANDROID_AVD_HOME $HOME/.config/.android/avd
+
+fish_add_path $ANDROID_HOME/cmdline-tools/latest/bin
+fish_add_path $ANDROID_HOME/platform-tools
+fish_add_path $ANDROID_HOME/emulator
 
 ###----- JAVA 17 HOME -----###
 set -gx JAVA_HOME ~/.sdkman/candidates/java/current
-set -gx PATH $JAVA_HOME/bin $PATH
 
 ##----- PYENV -----#
 set -Ux PYENV_ROOT /home/pako/.pyenv
